@@ -5,73 +5,73 @@ document.addEventListener('DOMContentLoaded', function() {
             id: 1,
             title: "Web Design Project",
             category: "web",
-            image: "https://source.unsplash.com/random/600x900/?webdesign"
+            image: "https://source.unsplash.com/random/600x900/?webdesign,cyan"
         },
         {
             id: 2,
             title: "Mobile App UI",
             category: "web",
-            image: "https://source.unsplash.com/random/600x900/?appdesign"
+            image: "https://source.unsplash.com/random/600x900/?appdesign,cyan"
         },
         {
             id: 3,
             title: "Brand Identity",
             category: "graphic",
-            image: "https://source.unsplash.com/random/600x900/?branding"
+            image: "https://source.unsplash.com/random/600x900/?branding,cyan"
         },
         {
             id: 4,
             title: "Product Photography",
             category: "photo",
-            image: "https://source.unsplash.com/random/600x900/?product"
+            image: "https://source.unsplash.com/random/600x900/?product,cyan"
         },
         {
             id: 5,
             title: "E-commerce Website",
             category: "web",
-            image: "https://source.unsplash.com/random/600x900/?ecommerce"
+            image: "https://source.unsplash.com/random/600x900/?ecommerce,cyan"
         },
         {
             id: 6,
             title: "Logo Design",
             category: "graphic",
-            image: "https://source.unsplash.com/random/600x900/?logo"
+            image: "https://source.unsplash.com/random/600x900/?logo,cyan"
         },
         {
             id: 7,
             title: "Nature Photography",
             category: "photo",
-            image: "https://source.unsplash.com/random/600x900/?nature"
+            image: "https://source.unsplash.com/random/600x900/?nature,cyan"
         },
         {
             id: 8,
             title: "Dashboard UI",
             category: "web",
-            image: "https://source.unsplash.com/random/600x900/?dashboard"
+            image: "https://source.unsplash.com/random/600x900/?dashboard,cyan"
         },
         {
             id: 9,
             title: "Poster Design",
             category: "graphic",
-            image: "https://source.unsplash.com/random/600x900/?poster"
+            image: "https://source.unsplash.com/random/600x900/?poster,cyan"
         },
         {
             id: 10,
             title: "Portrait Photography",
             category: "photo",
-            image: "https://source.unsplash.com/random/600x900/?portrait"
+            image: "https://source.unsplash.com/random/600x900/?portrait,cyan"
         },
         {
             id: 11,
             title: "Landing Page",
             category: "web",
-            image: "https://source.unsplash.com/random/600x900/?landingpage"
+            image: "https://source.unsplash.com/random/600x900/?landingpage,cyan"
         },
         {
             id: 12,
             title: "Packaging Design",
             category: "graphic",
-            image: "https://source.unsplash.com/random/600x900/?packaging"
+            image: "https://source.unsplash.com/random/600x900/?packaging,cyan"
         }
     ];
 
@@ -168,11 +168,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    });
-    
-    // Initialize Bootstrap tooltips
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
