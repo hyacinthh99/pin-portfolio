@@ -82,16 +82,20 @@ document.addEventListener('DOMContentLoaded', function() {
         portfolioGrid.innerHTML = '';
         
         items.forEach(item => {
-            const portfolioItem = document.createElement('div');
-            portfolioItem.className = `portfolio-item ${item.category}`;
-            portfolioItem.innerHTML = `
-                <img src="${item.image}" alt="${item.title}">
-                <div class="item-info">
-                    <h3>${item.title}</h3>
-                    <p>${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</p>
+            const col = document.createElement('div');
+            col.className = 'col-md-6 col-lg-4 mb-4';
+            
+            col.innerHTML = `
+                <div class="portfolio-item ${item.category}">
+                    <img src="${item.image}" class="img-fluid" alt="${item.title}">
+                    <div class="portfolio-overlay text-white">
+                        <h3 class="fw-bold">${item.title}</h3>
+                        <p class="text-capitalize">${item.category}</p>
+                    </div>
                 </div>
             `;
-            portfolioGrid.appendChild(portfolioItem);
+            
+            portfolioGrid.appendChild(col);
         });
     }
     
@@ -119,66 +123,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Form validation
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (this.checkValidity()) {
+            // Form is valid - process submission
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would typically send the data to a server
+            console.log('Form submitted:', formData);
+            
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Reset form
+            this.reset();
+            this.classList.remove('was-validated');
+        } else {
+            // Form is invalid - show validation errors
+            this.classList.add('was-validated');
+        }
+    }, false);
+    
     // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        });
-    });
-    
-    // Highlight active navigation item on scroll
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('nav a');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href') === `#${current}`) {
-                item.classList.add('active');
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
             }
         });
     });
     
-    // Form submission
-    const contactForm = document.querySelector('.contact-form');
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const message = this.querySelector('textarea').value;
-        
-        // Here you would typically send the form data to a server
-        console.log('Form submitted:', { name, email, message });
-        
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
-        
-        // Reset form
-        this.reset();
+    // Initialize Bootstrap tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
     });
-    
-    // Mobile menu toggle (would need additional HTML/CSS for full implementation)
-    // This is a placeholder for future enhancement
 });
