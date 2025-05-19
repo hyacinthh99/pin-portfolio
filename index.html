@@ -16,8 +16,7 @@
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <i class="fab fa-pinterest" style="color: #FFB6C1;"></i>
-                <span class="ms-2">My Portfolio</span>
+                <i class="fab fa-pinterest text-cyan me-2"></i>My Portfolio
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -54,7 +53,7 @@
         <div class="container text-center text-white">
             <h1 class="display-3 fw-bold mb-4">Discover My Creative Work</h1>
             <p class="lead mb-5">A collection of my projects, designs, and inspirations</p>
-            <a href="#portfolio" class="btn btn-lg px-4" style="background-color: #FFB6C1; color: white;">Explore More</a>
+            <a href="#portfolio" class="btn btn-cyan btn-lg px-4">Explore More</a>
         </div>
     </section>
 
@@ -73,12 +72,13 @@
                 </div>
                 <div class="col-lg-7">
                     <h3 class="fw-bold mb-4">Hello, I'm a Creative Designer</h3>
-                    <p class="text-muted mb-4">I specialize in creating visually stunning designs that communicate effectively and engage audiences.</p>
+                    <p class="text-muted mb-4">I specialize in creating visually stunning designs that communicate effectively and engage audiences. With a background in both graphic design and web development, I bring a unique perspective to every project.</p>
+                    <p class="text-muted mb-5">My approach combines aesthetic sensibility with functional design to create compelling visual experiences that stand out in today's crowded digital landscape.</p>
                     
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="d-flex align-items-center">
-                                <div class="me-3" style="color: #FFB6C1;">
+                                <div class="me-3 text-cyan">
                                     <i class="fas fa-palette fa-2x"></i>
                                 </div>
                                 <div>
@@ -87,7 +87,39 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Other skill items same structure -->
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 text-cyan">
+                                    <i class="fas fa-laptop-code fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Web Design</h5>
+                                    <p class="text-muted mb-0">Responsive, user-friendly sites</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 text-cyan">
+                                    <i class="fas fa-camera fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Photography</h5>
+                                    <p class="text-muted mb-0">Product & portrait photography</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3 text-cyan">
+                                    <i class="fas fa-mobile-alt fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">UI/UX</h5>
+                                    <p class="text-muted mb-0">Intuitive user interfaces</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,22 +129,28 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-5 bg-light">
         <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-3">My Portfolio</h2>
+                    <p class="lead text-muted">A selection of my recent work</p>
+                </div>
+            </div>
+            
             <!-- Filter Buttons -->
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="d-flex justify-content-center flex-wrap">
-                        <button class="btn btn-outline-secondary mx-2 my-1 active filter-btn" data-filter="all" 
-                                style="border-color: #FFB6C1; color: #FFB6C1;">All</button>
-                        <button class="btn btn-outline-secondary mx-2 my-1 filter-btn" data-filter="web"
-                                style="border-color: #FFB6C1; color: #FFB6C1;">Web Design</button>
-                        <!-- Other filter buttons same style -->
+                        <button class="btn btn-outline-cyan mx-2 my-1 active filter-btn" data-filter="all">All</button>
+                        <button class="btn btn-outline-cyan mx-2 my-1 filter-btn" data-filter="web">Web Design</button>
+                        <button class="btn btn-outline-cyan mx-2 my-1 filter-btn" data-filter="graphic">Graphic Design</button>
+                        <button class="btn btn-outline-cyan mx-2 my-1 filter-btn" data-filter="photo">Photography</button>
                     </div>
                 </div>
             </div>
             
             <!-- Portfolio Grid -->
             <div class="row g-3 portfolio-grid">
-                <!-- Items loaded via JavaScript -->
+                <!-- Portfolio items will be loaded via JavaScript -->
             </div>
         </div>
     </section>
@@ -120,12 +158,29 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5 my-5">
         <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
+                    <p class="lead text-muted">Have a project in mind? Let's talk!</p>
+                </div>
+            </div>
+            
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <form id="contactForm" class="needs-validation" novalidate>
-                        <!-- Form fields same as before -->
-                        <button type="submit" class="btn btn-lg w-100" 
-                                style="background-color: #FFB6C1; color: white;">Send Message</button>
+                        <div class="mb-3">
+                            <input type="text" class="form-control py-3" id="name" placeholder="Your Name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control py-3" id="email" placeholder="Your Email" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control py-3" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <div class="invalid-feedback">Please enter your message.</div>
+                        </div>
+                        <button type="submit" class="btn btn-cyan btn-lg w-100">Send Message</button>
                     </form>
                 </div>
                 
@@ -135,22 +190,40 @@
                         <ul class="list-unstyled">
                             <li class="mb-3">
                                 <div class="d-flex align-items-center">
-                                    <i class="fas fa-envelope me-3 fa-lg" style="color: #FFB6C1;"></i>
+                                    <i class="fas fa-envelope text-cyan me-3 fa-lg"></i>
                                     <span>hello@example.com</span>
                                 </div>
                             </li>
-                            <!-- Other contact info same style -->
+                            <li class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-phone text-cyan me-3 fa-lg"></i>
+                                    <span>(123) 456-7890</span>
+                                </div>
+                            </li>
+                            <li class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-map-marker-alt text-cyan me-3 fa-lg"></i>
+                                    <span>123 Creative St, Design City</span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                     
                     <div>
                         <h3 class="fw-bold mb-4">Follow Me</h3>
                         <div class="d-flex">
-                            <a href="#" class="btn btn-outline-secondary btn-lg me-3"
-                               style="border-color: #FFB6C1; color: #FFB6C1;">
+                            <a href="#" class="btn btn-outline-cyan btn-lg me-3">
                                 <i class="fab fa-pinterest"></i>
                             </a>
-                            <!-- Other social buttons same style -->
+                            <a href="#" class="btn btn-outline-cyan btn-lg me-3">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-cyan btn-lg me-3">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-cyan btn-lg">
+                                <i class="fab fa-behance"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -164,7 +237,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <a href="#" class="text-decoration-none d-flex align-items-center">
-                        <i class="fab fa-pinterest me-2 fa-2x" style="color: #FFB6C1;"></i>
+                        <i class="fab fa-pinterest text-cyan me-2 fa-2x"></i>
                         <span class="fs-4 fw-bold">My Portfolio</span>
                     </a>
                 </div>
