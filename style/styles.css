@@ -1,15 +1,59 @@
 :root {
-    --light-pink: #FFB6C1;
-    --light-pink-hover: #FF9AA2;
+    --bs-body-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --cyan: #00FFFF;
+    --cyan-hover: #00E0E0;
+}
+
+/* Custom Cyan Color Classes */
+.text-cyan {
+    color: var(--cyan) !important;
+}
+
+.bg-cyan {
+    background-color: var(--cyan) !important;
+}
+
+.btn-cyan {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--cyan);
+    --bs-btn-border-color: var(--cyan);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--cyan-hover);
+    --bs-btn-hover-border-color: var(--cyan-hover);
+    --bs-btn-focus-shadow-rgb: 0,255,255;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--cyan-hover);
+    --bs-btn-active-border-color: var(--cyan-hover);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--cyan);
+    --bs-btn-disabled-border-color: var(--cyan);
+}
+
+.btn-outline-cyan {
+    --bs-btn-color: var(--cyan);
+    --bs-btn-border-color: var(--cyan);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--cyan);
+    --bs-btn-hover-border-color: var(--cyan);
+    --bs-btn-focus-shadow-rgb: 0,255,255;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--cyan);
+    --bs-btn-active-border-color: var(--cyan);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--cyan);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--cyan);
+    --bs-gradient: none;
 }
 
 /* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://source.unsplash.com/random/1600x900/?design,creative,pink');
+                url('https://source.unsplash.com/random/1600x900/?design,creative,cyan');
     background-size: cover;
     background-position: center;
-    margin-top: 56px;
+    margin-top: 56px; /* Account for fixed navbar */
 }
 
 /* Portfolio Grid */
@@ -55,16 +99,16 @@
     opacity: 1;
 }
 
-/* Navbar Active State */
-.navbar-nav .nav-link.active {
-    color: var(--light-pink) !important;
-    font-weight: 600;
-}
-
 /* Section Padding */
 section {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+/* Navbar Active State */
+.navbar-nav .nav-link.active {
+    color: var(--cyan) !important;
+    font-weight: 600;
 }
 
 /* Responsive Adjustments */
